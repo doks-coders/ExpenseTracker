@@ -1,0 +1,38 @@
+﻿@model DetailsVM
+
+
+<form method="post">
+	<input hidden asp-for="Expenses.ID">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Edit Expense</h2>
+			<hr />
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="Expenses.Title"></label>
+			<input class="form-control" asp-for="Expenses.Title" />
+			<span asp-validation-for="Expenses.Title" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Expenses.Description"></label>
+			<input class="form-control" asp-for="Expenses.Description" />
+			<span asp-validation-for="Expenses.Description" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Expenses.AmountPaid"></label>
+			<input class="form-control" asp-for="Expenses.AmountPaid" />
+			<span asp-validation-for="Expenses.AmountPaid" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Expenses.CategoryName"></label>
+			
+			<select asp-for="Expenses.CategoryName" asp-items="@Model.CategoriesSelectList" class="form-select">
+				
+			</select>
+			<span asp-validation-for="Expenses.CategoryName" class="text-danger"></span>
+		</div>
+		<button class="btn btn-primary" type="submit">Update</button>
+	</div>
+
+</form>

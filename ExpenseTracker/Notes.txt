@@ -1,0 +1,13 @@
+﻿What I haven't done
+
+
+This code demonstrates the use of Stored Procedures to create a CRUD Application
+
+All Operations for operating the database has been uploaded to MSQLS
+
+What we haven't done
+-Separated code into class libraries
+-I havent implemented Identity
+-I havent seperated the ViewModels from Normal Models
+
+
